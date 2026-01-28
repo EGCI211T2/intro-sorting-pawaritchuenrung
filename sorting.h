@@ -4,7 +4,7 @@ void display(int *a,int N);
 
 void swap(int &a, int &b)
 {
-    if(b>a)
+    int temp;
     temp = a;
     b = a;
     a = temp;
