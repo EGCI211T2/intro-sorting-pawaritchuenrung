@@ -3,15 +3,16 @@
 //  First arg
 //
 //  Created by Mingmanas Sivaraksa on 2/1/2567 BE.
-//
+// 
 
 #include <iostream>
 using namespace std;
+#include "sorting.h"
 
 int main(int argc, char * argv[]) {
     
  
-  cout<<"argc is "<<argc<<endl;
+  cout<<"number is "<<argc<<endl;
     int i,N;
     int *a;
     for(i=1;i<argc;i++){
@@ -21,7 +22,7 @@ int main(int argc, char * argv[]) {
     /* Convert to numbers*/
     N=argc-1;
     cout<<"Before sorting:";
-    display(a,N);
+    display(a,N); // can display only when "a" has a value.
     
     sort(a,N);
     cout<<"After sorting:";
