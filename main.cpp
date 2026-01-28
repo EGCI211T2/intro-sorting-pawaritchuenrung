@@ -25,7 +25,7 @@ int main(int argc, char * argv[]) {
     cout<<"Before sorting:";
     display(a,N); // can display only when "a" has a value.
     
-    sort(a,N);
+    SelectSort(a,N); 
     cout<<"After sorting:";
     display(a,N);
     
