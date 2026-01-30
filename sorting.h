@@ -2,6 +2,7 @@ void swap(int &a,int &b);
 void sort(int *a,int N);
 void display(int *a,int N);
 void SelectSort(int *a, int N);
+void InsertionSort(int *a, int N);
 
 void swap(int &a, int &b)
 {
@@ -56,6 +57,21 @@ void sort(int *a, int N)//bubble
         break;
     cout<<endl;
     }
+}
+
+void InsertionSort(int *a, int N)
+{
+    int i,j,new_number;
+    for()
+    {
+        for()
+        {
+            // Element to be inserted
+            while()
+            // Shift elements to the right
+        }
+    }
+    // Insert element at correct position
 }
 
 
