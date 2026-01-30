@@ -15,16 +15,19 @@ void swap(int &a, int &b)
 void SelectSort(int *a, int N)//select (find the smallest and swap w/ the first one)
 {
     int i,j; 
-    int loc;// location of a[i]
+    int *p;//using pointer
+    int minIndex;// location of a[i]
     for(j=0;j<N-1;j++){ // always swap w/ the jth loc
-        int min = a[j]; // can be any value, set it to swap
-        loc = j ; 
+        //int min = a[j]; // can be any value, set it to swap
+        int min= a[0];
+        p =&a[j];
+        minIndex = j; 
         for(i=j+1;i<N;i++) // start w/ the lowest value location
         {
-            if(min > a[i])
+            if(*p > a[i])
             {
                 min = a[i]; // 
-                loc = i; // set the location on the 
+                //minIndex = i; // set the location on the 
             } swap(a[0],a[loc]); // swap min with the first location
         }
      }
