@@ -19,21 +19,22 @@ void SelectSort(int *a, int N)//select (find the smallest and swap w/ the first 
     int *p;//using pointer
     int min= a[0];
     int minIndex;// location of a[i]
-    for(j=0;j<N-1;j++){ // always swap w/ the jth loc
+    for(j=0;j<N-1;j++)
+    { // always swap w/ the jth loc
         //int min = a[j]; // can be any value, set it to swap
         
         p=&a[j];
         minIndex = j; 
         for(i=j+1;i<N;i++) // start w/ the lowest value location
         {
-            p=&a[j]
             if(*p > a[i])
             {
                 p=&a[i];
                 //min = a[i];  
-                //minIndex = i; // set the location on the 
-            } swap(a[j],*p); // swap min with the first location
+                minIndex = i; // set the location on the 
+            } 
         }
+        swap(a[j],*p); // swap min with the first location
      }
 
 }
@@ -42,18 +43,18 @@ void SelectSort(int *a, int N)//select (find the smallest and swap w/ the first 
 void sort(int *a, int N)//bubble
 {
     int i,j;
-    int sorted;
+    bool sorted;
 
     for(i=0;i<N-1;i++)
     {
-        sorted=0; // check if func swap?
-        for(j=0;j<N-1;j++)
+        sorted=true; // check if func swap?
+        for(j=0;j<N-1-i;j++)
         {
             if(a[j] > a[j+1])
             swap(a[j],a[j+1]);
-            sorted=1;
+            sorted=false;
         }
-        if(sorted==0)
+        if(sorted)
         break;
     cout<<endl;
     }
@@ -61,18 +62,25 @@ void sort(int *a, int N)//bubble
 
 void InsertionSort(int *a, int N)
 {
-    int i,j,new_number;
-    for()
+    int i, j, key;
+
+    for(i = 1; i < N; i++)   // starting w/ 2nd
     {
-        for()
+        key = a[i];        // inserting key
+        j = i - 1;
+
+        // moving larger one to the right
+        while(j >= 0 && a[j] > key)
         {
-            // Element to be inserted
-            while()
-            // Shift elements to the right
+            a[j + 1] = a[j];
+            j--;
         }
+
+        // inserting key in the correct position
+        a[j + 1] = key;
     }
-    // Insert element at correct position
 }
+
 
 
 void display(int *a,int N)
