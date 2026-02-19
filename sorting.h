@@ -50,7 +50,7 @@ void sort(int *a, int N)//bubble
         sorted=true; // check if func swap?
         for(j=0;j<N-1-i;j++)
         {
-            if(a[j] > a[j+1])
+            if(a[j] > a[j+1]) //this is for swaping
             swap(a[j],a[j+1]);
             sorted=false;
         }
